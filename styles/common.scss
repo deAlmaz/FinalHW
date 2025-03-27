@@ -1,0 +1,107 @@
+$main-regular_color: #323264;
+$main-alt_color: #46466E;
+$main-soft_color: #686887;
+
+$accent_color: #F0145A;
+
+$active-regular_color: #24A3FF;
+$active-hover_color: #0085FF;
+$active-active_color: #006CCF;
+
+$grey-bg_color: #F5F5FA;
+$grey-bg-alt_color: #EDEDF7;
+$grey-text_color: #B3B3BA;
+$grey-separator_color: #E6E6F0;
+
+$gradient-regular_color: linear-gradient(128.63deg, #323264 0%, #323264 73.96%, #A54B5F 100%);
+$gradient-soft_color: linear-gradient(42.01deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%);
+$gradient-red_color: linear-gradient(323.35deg, #F0145A 6.7%, #693264 70.36%);
+$gradient-super-soft_color: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+$gradient-red-text_color: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+$gradient-red-text_color-reversed: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4{
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+  h2, h3, h4{
+    color: $main-regular_color;
+  }
+}
+
+h1{
+  font-size: 38px;
+
+  line-height: 100%;
+  background: $gradient-red-text_color;
+  color: transparent;
+  background-clip: text;
+}
+
+h2{
+  font-size: 30px;
+  line-height: 100%;
+}
+
+h3{
+  font-size: 22px;
+  line-height: 100%;
+}
+h3.caps{
+  font-size: 14px;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+h4{
+  font-size: 16px;
+  line-height: 100%;
+}
+
+p{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: black;
+  &:not(:last-of-type) {
+    margin-block-end: 20px;
+  }
+}
+
+ul, ol{
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  color: black;
+  li::marker {
+    color: $accent_color;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: end;
+    vertical-align: middle;
+    //transform: translateY(1000rem);
+  }
+  li:not(:last-of-type) {
+    margin-block-end: 15px;
+  }
+  :is(ul){
+    list-style-type: circle;
+  }
+}
+
+a{
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: $active-regular_color;
+  &:hover{
+    color: $accent_color;
+  }
+}
